@@ -49,6 +49,29 @@ private:
 
 };
 
+void remove_vowel(string& s)
+{
+	string s_rep;
+	string vowels{ " a e i o u" };
+
+	for (int i = 0; i < s.size(); ++i)
+	{
+		for (int j = 0; j < vowels.size(); ++j)
+		{
+			while (s[i] != vowels[j] && j<vowels.size() - 1)
+			{
+				++j;
+			}
+			if (s[i] == vowels[j])++i;
+			else s_rep.push_back(s[i]);
+
+		}
+
+	}
+	s = s_rep;
+}
+
+
 
 void Bar_graph::auto_scale(vector<double>&v, int& s)
 {
