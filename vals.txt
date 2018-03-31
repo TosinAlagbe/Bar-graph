@@ -1,0 +1,5 @@
+table 40
+chair 22
+cloth 10
+bottle 56
+concrete 32
